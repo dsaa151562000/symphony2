@@ -1,4 +1,8 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+app_rest_concert:
+    resource: "@AppBundle/Controller/Api/ConcertController.php"
+    type: rest
     prefix: /api
