@@ -85,3 +85,14 @@ swiftmailer:
 fos_rest:
           view:
                view_response_listener: force
+
+jms_di_extra:
+     locations:
+         all_bundles: true
+         directories: ["%kernel.root_dir%/../src"]
+
+
+app:
+    members:
+        山田: {part: トランペット, joinedDate: "2010-10-01"}
+        田中: {part: バイオリン, joinedDate: "2008-04-10"}

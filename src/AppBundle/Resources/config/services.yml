@@ -1,0 +1,9 @@
+parameters:
+    csv_encoding: Shift_JIS
+
+services:
+    app.inquiry_repository:
+        class:          AppBundle\Entity\InquiryRepository
+        factory:        [@doctrine.orm.entity_manager, getRepository]
+        arguments:
+          - AppBundle\Entity\Inquiry

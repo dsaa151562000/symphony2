@@ -29,7 +29,7 @@ class NotifyUnprocessedInquiryCommand extends ContainerAwareCommand
         // $this->getContainer( )メソッドを呼び出すことでサービスコンテナへアクセスでき、
         $container = $this->getContainer();
 
-
+        $csvBuilder = $this->getContainer()->get('app.inquiry_csv_builder');
         //サービスコンテナのget( )メソッドを使えばサービスを取得できます。
         $em = $container->get('doctrine')->getManager();
 
