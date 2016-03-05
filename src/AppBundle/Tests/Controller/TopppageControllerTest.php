@@ -10,6 +10,12 @@ class TopppageControllerTest extends WebTestCase
     /**
      * @test */
 
-    public function 指定した属性のメンバーが追加されていること() {
+    public function 画面が表示される() {
+
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/');
+        $this->assertTrue($crawler->filter('html:contains("歴史と調和するシンフォニー、音楽で未来へつなぐ")')->count() > 0);
+
     }
+
 }

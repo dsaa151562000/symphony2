@@ -46,6 +46,16 @@ class LoadInquiryData implements FixtureInterface, ContainerAwareInterface
         $inquiry2->setProcessStatus(0);
         $manager->persist($inquiry2);
 
+
+        $inquiry3 = new Inquiry();
+        $inquiry3->setName('ニコロ・パガニーニ3');
+        $inquiry3->setEmail('3paganini@example.com');
+        $inquiry3->setTel('012-1111-4444');
+        $inquiry3->setType(1);
+        $inquiry3->setContent('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+        $inquiry3->setProcessStatus(0);
+        $manager->persist($inquiry3);
+
         $manager->flush();
     }
 }
